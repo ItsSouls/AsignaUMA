@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="757.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.uma.asignauma.Controlador.CtrListarEstudiantes">
+    <padding>
+        <Insets bottom="12.0" />
+    </padding>
+    <HBox alignment="CENTER_LEFT" VBox.vgrow="NEVER">
+        <padding>
+            <Insets left="12.0" right="12.0" />
+        </padding>
+        <VBox.margin>
+            <Insets bottom="6.0" top="6.0" />
+        </VBox.margin>
+        <TextField fx:id="buscarEstudiante" onKeyPressed="#onEnter" prefHeight="25.0" prefWidth="488.0" promptText="Buscar estudiante" />
+        <Button mnemonicParsing="false" onMouseClicked="#onSearchButtonClick" prefHeight="25.0" prefWidth="54.0" text="Buscar" HBox.hgrow="NEVER" />
+      <Separator opacity="0.0" orientation="VERTICAL" prefHeight="25.0" prefWidth="139.0" />
+      <Button mnemonicParsing="false" onMouseClicked="#cerrar" text="Volver" />
+    </HBox>
+    <HBox alignment="CENTER" VBox.vgrow="ALWAYS">
+        <padding>
+            <Insets left="12.0" right="12.0" />
+        </padding>
+        <opaqueInsets>
+            <Insets />
+        </opaqueInsets>
+        <VBox.margin>
+            <Insets bottom="6.0" />
+        </VBox.margin>
+        <VBox prefHeight="345.0" prefWidth="684.0" HBox.hgrow="ALWAYS">
+            <TableView fx:id="tablaEstudiantes" cache="true" cacheHint="SPEED" prefHeight="345.0" prefWidth="663.0" VBox.vgrow="ALWAYS">
+                <columns>
+                    <TableColumn fx:id="columnaNombre" prefWidth="100.0" text="Nombre" />
+                    <TableColumn fx:id="columnaApellidos" prefWidth="100.0" text="Apellidos" />
+                    <TableColumn fx:id="columnaSede" prefWidth="100.0" text="Sede" />
+                    <TableColumn fx:id="columnaMateria" prefWidth="100.0" text="Materia" />
+                    <TableColumn fx:id="columnaAula" prefWidth="100.0" text="Aula" />
+                    <TableColumn fx:id="columnaHorario" prefWidth="150.0" text="Hora" />
+                </columns>
+                <columnResizePolicy>
+                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                </columnResizePolicy>
+            </TableView>
+        </VBox>
+    </HBox>
+</VBox>

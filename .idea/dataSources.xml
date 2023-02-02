@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="asignaumadb" uuid="661653e5-be81-459c-b467-11f41f77cde7">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://database-pevau.cobadwnzalab.eu-central-1.rds.amazonaws.com:3306/grupo08DB</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+      <driver-properties>
+        <property name="allowLoadLocalInfile" value="TRUE" />
+      </driver-properties>
+    </data-source>
+  </component>
+</project>

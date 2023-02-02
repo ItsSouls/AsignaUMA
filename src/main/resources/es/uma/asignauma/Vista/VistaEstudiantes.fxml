@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.uma.asignauma.Controlador.CtrEstudiantes">
+    <padding>
+        <Insets bottom="12.0" />
+    </padding>
+    <HBox alignment="CENTER_LEFT" VBox.vgrow="NEVER">
+        <padding>
+            <Insets left="12.0" right="12.0" />
+        </padding>
+        <VBox.margin>
+            <Insets bottom="6.0" top="6.0" />
+        </VBox.margin>
+        <TextField fx:id="buscarEstudiante" onKeyPressed="#onEnter" prefHeight="25.0" prefWidth="480.0" promptText="Buscar estudiante" />
+        <Button mnemonicParsing="false" onMouseClicked="#onSearchButtonClick" prefHeight="25.0" prefWidth="54.0" text="Buscar" HBox.hgrow="NEVER" />
+    </HBox>
+    <HBox alignment="CENTER" VBox.vgrow="ALWAYS">
+        <padding>
+            <Insets left="12.0" right="12.0" />
+        </padding>
+        <opaqueInsets>
+            <Insets />
+        </opaqueInsets>
+        <VBox.margin>
+            <Insets bottom="6.0" />
+        </VBox.margin>
+        <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+            <TableView fx:id="tablaEstudiantes" cache="true" cacheHint="SPEED" VBox.vgrow="ALWAYS">
+                <columns>
+                    <TableColumn fx:id="columnaCentro" prefWidth="100.0" text="Centro" />
+                    <TableColumn fx:id="columnaNombre" prefWidth="100.0" text="Nombre" />
+                    <TableColumn fx:id="columnaPrimerApellido" prefWidth="100.0" text="Apellido 1" />
+                    <TableColumn fx:id="columnaSegundoApellido" prefWidth="100.0" text="Apellido 2" />
+                    <TableColumn fx:id="columnaDni" maxWidth="3500.0" prefWidth="100.0" text="DNI" />
+                    <TableColumn fx:id="columnaMaterias" prefWidth="150.0" text="Materias" />
+                </columns>
+                <columnResizePolicy>
+                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                </columnResizePolicy>
+            </TableView>
+        </VBox>
+        <VBox alignment="TOP_CENTER" prefWidth="120.0">
+            <HBox.margin>
+                <Insets />
+            </HBox.margin>
+            <padding>
+                <Insets left="12.0" />
+            </padding>
+            <Button mnemonicParsing="false" onMouseClicked="#onLoadButtonClick" text="Cargar" />
+            <Separator opacity="0.0" prefWidth="200.0" />
+            <Button mnemonicParsing="false" onMouseClicked="#listarEstudiantes" text="Listar estudiantes" />
+        </VBox>
+    </HBox>
+    <HBox prefHeight="100.0" prefWidth="200.0">
+        <VBox.margin>
+            <Insets />
+        </VBox.margin>
+        <padding>
+            <Insets left="12.0" right="12.0" />
+        </padding>
+        <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+            <Label text="Log" />
+            <ListView fx:id="log" prefHeight="200.0" prefWidth="200.0" />
+        </VBox>
+        <VBox alignment="CENTER" prefWidth="120.0">
+            <padding>
+                <Insets left="12.0" />
+            </padding>
+            <Button mnemonicParsing="false" onAction="#editOnAction" text="Editar" />
+        </VBox>
+    </HBox>
+</VBox>

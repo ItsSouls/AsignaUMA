@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/17.0.2-ea"
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.uma.asignauma.Controlador.Controlador">
+    <AnchorPane VBox.vgrow="ALWAYS">
+        <TabPane fx:id="general" onMouseClicked="#setAulaVigi" tabClosingPolicy="UNAVAILABLE"
+                 AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                 AnchorPane.topAnchor="0.0">
+            <Tab id="estudiantesTab" text="Estudiantes">
+                <fx:include source="VistaEstudiantes.fxml"/>
+            </Tab>
+            <Tab id="institutosTab" text="Institutos">
+                <fx:include source="VistaInstitutos.fxml"/>
+            </Tab>
+            <Tab id="aulasTab" text="Aulas">
+                <fx:include source="VistaAulas.fxml"/>
+            </Tab>
+            <Tab id="sedesTab" text="Sedes">
+                <fx:include source="VistaSedes.fxml"/>
+            </Tab>
+            <Tab id="examenesTab" text="Exámenes">
+                <fx:include source="VistaExamenes.fxml"/>
+            </Tab>
+            <Tab id="respAulaTab" text="Responsables de aula">
+                <fx:include source="VistaRAula.fxml"/>
+            </Tab>
+            <Tab id="vigilantesTab" text="Vigilantes">
+                <fx:include source="VistaVigilantes.fxml"/>
+            </Tab>
+        </TabPane>
+        <HBox AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="1.0">
+            <Button mnemonicParsing="false" onAction="#onLoadButtonClick" text="Cargar usuarios"/>
+        </HBox>
+    </AnchorPane>
+</VBox>
